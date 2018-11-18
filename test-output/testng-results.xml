@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="38816" started-at="2018-11-18T10:39:09Z" finished-at="2018-11-18T10:39:48Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="38816" started-at="2018-11-18T10:39:09Z" finished-at="2018-11-18T10:39:48Z">
+      <class name="com.rg.test.TestLogin">
+        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="8154" started-at="2018-11-18T10:39:09Z" finished-at="2018-11-18T10:39:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setting -->
+        <test-method status="PASS" signature="getTitel()[pri:1, instance:com.rg.test.TestLogin@4d3167f4]" name="getTitel" duration-ms="25" started-at="2018-11-18T10:39:17Z" finished-at="2018-11-18T10:39:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getTitel -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="1211" started-at="2018-11-18T10:39:17Z" finished-at="2018-11-18T10:39:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="7798" started-at="2018-11-18T10:39:18Z" finished-at="2018-11-18T10:39:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setting -->
+        <test-method status="PASS" signature="testLogin()[pri:2, instance:com.rg.test.TestLogin@4d3167f4]" name="testLogin" duration-ms="6814" started-at="2018-11-18T10:39:26Z" finished-at="2018-11-18T10:39:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="718" started-at="2018-11-18T10:39:33Z" finished-at="2018-11-18T10:39:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="7271" started-at="2018-11-18T10:39:33Z" finished-at="2018-11-18T10:39:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setting -->
+        <test-method status="PASS" signature="checkHomePageTitel()[pri:3, instance:com.rg.test.TestLogin@4d3167f4]" name="checkHomePageTitel" duration-ms="6097" started-at="2018-11-18T10:39:41Z" finished-at="2018-11-18T10:39:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkHomePageTitel -->
+        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="699" started-at="2018-11-18T10:39:47Z" finished-at="2018-11-18T10:39:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- clear -->
+      </class> <!-- com.rg.test.TestLogin -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
