@@ -1,14 +1,14 @@
 package com.rg.basepage;
 
-import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,7 +17,9 @@ public class BasePage {
 	public static WebDriver driver;
 	public static Properties prop = null;
 	public static String propPath = "E:\\Workspace\\TestNg_Testing\\Exceptio\\TestNGPOM\\src\\main\\java\\com\\rg\\property\\propertie.properties";
-	//public WebDriverWait webdriverwait = null;
+	private JavascriptExecutor executor =null;
+	private Actions action=null;
+
 	public BasePage() {
 		try {
 			FileInputStream fis = new FileInputStream(propPath);
@@ -39,12 +41,23 @@ public class BasePage {
 		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 	}
 	
 	public void waitForElementVisible(WebElement element ,int timeout){
-		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
+		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
+	}
+	
+	public void clickByjavaScriptExecuter(WebElement element){
+		waitForElementVisible(element,20);
+		 executor = (JavascriptExecutor)driver;
+		executor.executeScript("arguments[0].click();", element);
+	}
+	
+	public void clickByActionClass(WebElement element){
+		 action=new Actions(driver);
+		 action.moveToElement(element).click().build().perform();
 	}
 }

@@ -6,6 +6,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.rg.basepage.BasePage;
+import com.rg.pageobject.CalendarPage;
 import com.rg.pageobject.HomePage;
 import com.rg.pageobject.LoginPage;
 
@@ -13,6 +14,7 @@ public class TestHomepage extends BasePage{
 	
 	LoginPage loginPage =null;
 	HomePage homePage = null;
+	CalendarPage calendarPage = null;
 	
 	public TestHomepage() {
 		// TODO Auto-generated constructor stub
@@ -36,9 +38,9 @@ public class TestHomepage extends BasePage{
 	}
 	
 	@Test(priority=2)
-	public void clicCalendar(){
-		homePage.Clickcalendar();
-		
+	public CalendarPage clicCalendar(){
+		calendarPage = homePage.Clickcalendar();
+		return new CalendarPage();
 	}
 	
 	

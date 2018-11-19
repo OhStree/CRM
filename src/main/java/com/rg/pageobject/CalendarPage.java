@@ -1,5 +1,8 @@
 package com.rg.pageobject;
 
-public class CalendarPage {
+import com.rg.basepage.BasePage;
+
+public class CalendarPage extends BasePage{
+	
 
 }

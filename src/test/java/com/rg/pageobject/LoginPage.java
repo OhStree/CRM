@@ -1,13 +1,9 @@
 package com.rg.pageobject;
 
-import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.PageFactoryFinder;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.rg.basepage.BasePage;
 
@@ -37,15 +33,10 @@ public class LoginPage extends BasePage {
 		
 		username.sendKeys(uname);
 		password.sendKeys(psw);
-		waitForElementVisible(submit,10);
-		try {
-			Thread.sleep(2000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		//clickByjavaScriptExecuter(submit);
+		clickByActionClass(submit);
 		
-		submit.click();
+		//submit.click();
 		return new HomePage();
 		
 	}
