@@ -16,7 +16,7 @@ public class BasePage {
 
 	public static WebDriver driver;
 	public static Properties prop = null;
-	public static String propPath = "E:\\Workspace\\TestNg_Testing\\Exceptio\\TestNGPOM\\src\\main\\java\\com\\rg\\property\\propertie.properties";
+	public static String propPath = "C:\\Users\\Rohit Gaikwad\\Desktop\\TestNGPOM\\src\\main\\java\\com\\rg\\property\\propertie.properties";
 	private JavascriptExecutor executor =null;
 	private Actions action=null;
 

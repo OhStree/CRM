@@ -1,86 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="33179" started-at="2018-11-19T17:54:01Z" finished-at="2018-11-19T17:54:34Z">
+  <suite name="Suite" duration-ms="37600" started-at="2018-11-20T18:25:50Z" finished-at="2018-11-20T18:26:28Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="33179" started-at="2018-11-19T17:54:01Z" finished-at="2018-11-19T17:54:34Z">
+    <test name="Test" duration-ms="37600" started-at="2018-11-20T18:25:50Z" finished-at="2018-11-20T18:26:28Z">
       <class name="com.rg.test.TestLogin">
-        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="10826" started-at="2018-11-19T17:54:01Z" finished-at="2018-11-19T17:54:12Z">
+        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="8953" started-at="2018-11-20T18:25:50Z" finished-at="2018-11-20T18:25:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setting -->
-        <test-method status="PASS" signature="getTitel()[pri:1, instance:com.rg.test.TestLogin@4d3167f4]" name="getTitel" duration-ms="103" started-at="2018-11-19T17:54:12Z" finished-at="2018-11-19T17:54:12Z">
+        <test-method status="PASS" signature="getTitel()[pri:1, instance:com.rg.test.TestLogin@4d3167f4]" name="getTitel" duration-ms="84" started-at="2018-11-20T18:25:59Z" finished-at="2018-11-20T18:25:59Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getTitel -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="943" started-at="2018-11-19T17:54:12Z" finished-at="2018-11-19T17:54:13Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="897" started-at="2018-11-20T18:25:59Z" finished-at="2018-11-20T18:26:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
-        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="8793" started-at="2018-11-19T17:54:13Z" finished-at="2018-11-19T17:54:22Z">
+        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="8716" started-at="2018-11-20T18:26:00Z" finished-at="2018-11-20T18:26:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setting -->
-        <test-method status="PASS" signature="testLogin()[pri:2, instance:com.rg.test.TestLogin@4d3167f4]" name="testLogin" duration-ms="581" started-at="2018-11-19T17:54:22Z" finished-at="2018-11-19T17:54:22Z">
+        <test-method status="PASS" signature="testLogin()[pri:2, instance:com.rg.test.TestLogin@4d3167f4]" name="testLogin" duration-ms="4590" started-at="2018-11-20T18:26:09Z" finished-at="2018-11-20T18:26:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="906" started-at="2018-11-19T17:54:22Z" finished-at="2018-11-19T17:54:23Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="878" started-at="2018-11-20T18:26:14Z" finished-at="2018-11-20T18:26:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
-        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="9261" started-at="2018-11-19T17:54:23Z" finished-at="2018-11-19T17:54:32Z">
+        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="7956" started-at="2018-11-20T18:26:15Z" finished-at="2018-11-20T18:26:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setting -->
-        <test-method status="FAIL" signature="checkHomePageTitel()[pri:3, instance:com.rg.test.TestLogin@4d3167f4]" name="checkHomePageTitel" duration-ms="805" started-at="2018-11-19T17:54:32Z" finished-at="2018-11-19T17:54:33Z">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[expected [CRMPRO] but found [#1 Free CRM software in the cloud for sales and service]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [CRMPRO] but found [#1 Free CRM software in the cloud for sales and service]
-at org.testng.Assert.fail(Assert.java:96)
-at org.testng.Assert.failNotEquals(Assert.java:776)
-at org.testng.Assert.assertEqualsImpl(Assert.java:137)
-at org.testng.Assert.assertEquals(Assert.java:118)
-at org.testng.Assert.assertEquals(Assert.java:453)
-at org.testng.Assert.assertEquals(Assert.java:463)
-at com.rg.test.TestLogin.checkHomePageTitel(TestLogin.java:43)
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method status="PASS" signature="checkHomePageTitel()[pri:3, instance:com.rg.test.TestLogin@4d3167f4]" name="checkHomePageTitel" duration-ms="4640" started-at="2018-11-20T18:26:23Z" finished-at="2018-11-20T18:26:27Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkHomePageTitel -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="890" started-at="2018-11-19T17:54:33Z" finished-at="2018-11-19T17:54:34Z">
+        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="849" started-at="2018-11-20T18:26:27Z" finished-at="2018-11-20T18:26:28Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clear -->
