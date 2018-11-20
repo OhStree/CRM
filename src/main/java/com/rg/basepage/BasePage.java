@@ -56,8 +56,9 @@ public class BasePage {
 		executor.executeScript("arguments[0].click();", element);
 	}
 	
-	public void clickByActionClass(WebElement element){
-		 action=new Actions(driver);
-		 action.moveToElement(element).click().build().perform();
+	public void mouseHoverActionClass(WebElement element){
+		waitForElementVisible(element,20);
+		action = new Actions(driver);
+        action.moveToElement(element).build().perform();
 	}
 }

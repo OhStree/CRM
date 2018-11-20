@@ -14,8 +14,8 @@
   <test name="Test">
     <classes>
     <class name="com.rg.test.TestLogin" />
-			<!-- <class name="com.rg.test.TestHomepage" />
-      <class name="com.rg.test.CalenderTest"/> -->
+	 <class name="com.rg.test.TestHomepage" />
+      <class name="com.rg.test.CalenderTest"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
