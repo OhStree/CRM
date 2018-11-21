@@ -34,6 +34,9 @@ public class BasePage {
 		switch ((prop.getProperty("browser"))) {
 		case "chrome":
 			chrome();
+		case "firefox":
+			chrome();
+
 		}
 	}
 
