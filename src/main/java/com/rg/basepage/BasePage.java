@@ -37,6 +37,11 @@ public class BasePage {
 			chrome();
 	
 		}
+		case "IE":
+			chrome();
+		}
+	/*
+	Shivani Mahindre*/
 	}
 
 	public void chrome() {
