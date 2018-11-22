@@ -38,10 +38,14 @@ public class BasePage {
 		case "chrome":
 			chrome();
 	
-		}
+		
 		case "IE":
 			chrome();
+		case "safari":
+			chrome();
+
 		}
+	}
 	/*
 	Shivani Mahindre*/
 	}
