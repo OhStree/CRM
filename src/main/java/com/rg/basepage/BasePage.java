@@ -62,12 +62,6 @@ public class BasePage {
 	
 	public void IE(){
 		
-		System.setProperty("webdriver.gecko.driver", prop.getProperty("driver"));
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-		driver.get(prop.getProperty("url"));
 		
 	}
 	
