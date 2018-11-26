@@ -6,13 +6,14 @@ import org.testng.annotations.Test;
 
 import com.rg.basepage.BasePage;
 import com.rg.pageobject.CalendarPage;
+import com.rg.pageobject.HomePage;
 import com.rg.pageobject.LoginPage;
 
 public class CalenderTest extends BasePage{
 	
-	LoginPage loginpage = new LoginPage();
-	CalendarPage calendarPage = new CalendarPage();
-	
+	LoginPage loginpage = null;
+	CalendarPage calendarPage = null;
+	HomePage homePage = null;
 	public CalenderTest() {
 		// TODO Auto-generated constructor stub
 		super();
@@ -20,24 +21,24 @@ public class CalenderTest extends BasePage{
 
 	@BeforeMethod
 	public void beforeMethod() {
-	
 		initializer();
-		LoginPage loginpage = new LoginPage();
-		loginpage.testLogin(prop.getProperty("username"), prop.getProperty("password"));
+		 loginpage = new LoginPage();
+			homePage= loginpage.testLogin(prop.getProperty("username"), prop.getProperty("password"));
+			
+		//loginpage.testLogin(prop.getProperty("username"), prop.getProperty("password"));
 		
 	}
 	
 
 	@Test
 	public void calender() {
-		
+		calendarPage = new CalendarPage();
 		calendarPage.mouseOverToCalende();
-
 	}
 
 	@AfterMethod
 	public void afterMethod() {
-		driver.quit();
+		//driver.quit();
 	}
 
 }

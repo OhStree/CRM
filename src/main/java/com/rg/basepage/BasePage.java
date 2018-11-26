@@ -35,12 +35,14 @@ public class BasePage {
 		switch ((prop.getProperty("browser"))) {
 		case "chrome":
 			chrome();
-	
-		
+			break;
+			
 		case "IE":
 			chrome();
+			break;
 		case "safari":
 			chrome();
+			break;
 
 		}
 	}
@@ -84,6 +86,14 @@ public class BasePage {
 	public void mouseHoverActionClass(WebElement element){
 		waitForElementVisible(element,20);
 		action = new Actions(driver);
-        action.moveToElement(element).build().perform();
+        action.clickAndHold(element).build().perform();
 	}
+	
+	
+	
+	
+	public void switchToFrame(WebElement element){
+		driver.switchTo().frame(element);
+	}
+	
 }

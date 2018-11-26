@@ -36,12 +36,12 @@ public class TestLogin extends BasePage{
 		
 	}
 	
-	@Test(priority=3)
-	public void checkHomePageTitel(){
-		homePage= loginPage.testLogin(prop.getProperty("username"), prop.getProperty("password"));
-		String homePageTitel =  homePage.getTitel();
-		Assert.assertEquals(homePageTitel, "CRMPRO");
-	}
+//	@Test(priority=3)
+//	public void checkHomePageTitel(){
+//		homePage= loginPage.testLogin(prop.getProperty("username"), prop.getProperty("password"));
+//		String homePageTitel =  homePage.getTitel();
+//		Assert.assertEquals(homePageTitel, "CRMPRO");
+//	}
 	
 	
 	@AfterMethod

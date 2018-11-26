@@ -34,7 +34,7 @@ public class LoginPage extends BasePage {
 		username.sendKeys(uname);
 		password.sendKeys(psw);
 		clickByjavaScriptExecuter(submit);
-		//clickByActionClass(submit);
+	
 		
 		//submit.click();
 		return new HomePage();

@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="37600" started-at="2018-11-20T18:25:50Z" finished-at="2018-11-20T18:26:28Z">
+  <suite name="Default suite" duration-ms="19839" started-at="2018-11-26T19:04:18Z" finished-at="2018-11-26T19:04:38Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="37600" started-at="2018-11-20T18:25:50Z" finished-at="2018-11-20T18:26:28Z">
-      <class name="com.rg.test.TestLogin">
-        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="8953" started-at="2018-11-20T18:25:50Z" finished-at="2018-11-20T18:25:59Z">
+    <test name="Default test" duration-ms="19839" started-at="2018-11-26T19:04:18Z" finished-at="2018-11-26T19:04:38Z">
+      <class name="com.rg.test.CalenderTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.rg.test.CalenderTest@4d3167f4]" name="beforeMethod" is-config="true" duration-ms="16595" started-at="2018-11-26T19:04:18Z" finished-at="2018-11-26T19:04:35Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setting -->
-        <test-method status="PASS" signature="getTitel()[pri:1, instance:com.rg.test.TestLogin@4d3167f4]" name="getTitel" duration-ms="84" started-at="2018-11-20T18:25:59Z" finished-at="2018-11-20T18:25:59Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="calender()[pri:0, instance:com.rg.test.CalenderTest@4d3167f4]" name="calender" duration-ms="3221" started-at="2018-11-26T19:04:35Z" finished-at="2018-11-26T19:04:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTitel -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="897" started-at="2018-11-20T18:25:59Z" finished-at="2018-11-20T18:26:00Z">
+        </test-method> <!-- calender -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.rg.test.CalenderTest@4d3167f4]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-11-26T19:04:38Z" finished-at="2018-11-26T19:04:38Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- clear -->
-        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="8716" started-at="2018-11-20T18:26:00Z" finished-at="2018-11-20T18:26:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setting -->
-        <test-method status="PASS" signature="testLogin()[pri:2, instance:com.rg.test.TestLogin@4d3167f4]" name="testLogin" duration-ms="4590" started-at="2018-11-20T18:26:09Z" finished-at="2018-11-20T18:26:14Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="878" started-at="2018-11-20T18:26:14Z" finished-at="2018-11-20T18:26:15Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clear -->
-        <test-method status="PASS" signature="setting()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="setting" is-config="true" duration-ms="7956" started-at="2018-11-20T18:26:15Z" finished-at="2018-11-20T18:26:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setting -->
-        <test-method status="PASS" signature="checkHomePageTitel()[pri:3, instance:com.rg.test.TestLogin@4d3167f4]" name="checkHomePageTitel" duration-ms="4640" started-at="2018-11-20T18:26:23Z" finished-at="2018-11-20T18:26:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkHomePageTitel -->
-        <test-method status="PASS" signature="clear()[pri:0, instance:com.rg.test.TestLogin@4d3167f4]" name="clear" is-config="true" duration-ms="849" started-at="2018-11-20T18:26:27Z" finished-at="2018-11-20T18:26:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- clear -->
-      </class> <!-- com.rg.test.TestLogin -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.rg.test.CalenderTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

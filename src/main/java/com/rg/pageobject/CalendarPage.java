@@ -14,13 +14,20 @@ public class CalendarPage extends BasePage{
 	@FindBy(xpath = "//a[@title='New Event']")
 	WebElement newEvent;
 	
+	@FindBy(xpath="//frame[@name='mainpanel']")
+	WebElement frame;
+	
 	public CalendarPage() {
 		// TODO Auto-generated constructor stub
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void mouseOverToCalende(){
+		switchToFrame(frame);
+		waitForElementVisible(calender, 30);
 		mouseHoverActionClass(calender);
+		
+	
 		newEvent.click();
 		
 	}

@@ -13,8 +13,8 @@
 <suite name="Suite" parallel="false">
   <test name="Test">
     <classes>
-    <class name="com.rg.test.TestLogin" />
-	 <class name="com.rg.test.TestHomepage" />
+   <!--  <class name="com.rg.test.TestLogin" />
+	 <class name="com.rg.test.TestHomepage" /> -->
       <class name="com.rg.test.CalenderTest"/> 
     </classes>
   </test> <!-- Test -->
