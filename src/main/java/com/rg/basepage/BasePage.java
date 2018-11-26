@@ -15,8 +15,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasePage {
 
-	
-	//zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
 	public static WebDriver driver;
 	public static Properties prop = null;
 	public static String propPath = "C:\\Users\\Rohit Gaikwad\\Desktop\\TestNGPOM\\src\\main\\java\\com\\rg\\property\\propertie.properties";
@@ -46,10 +44,6 @@ public class BasePage {
 
 		}
 	}
-	/*
-	Shivani Mahindre*/
-	
-	
 
 	public void chrome() {
 		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
