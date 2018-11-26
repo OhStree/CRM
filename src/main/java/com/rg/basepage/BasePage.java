@@ -49,6 +49,9 @@ public class BasePage {
 	/*
 	Shivani Mahindre*/
 	}
+	/*
+	Shivani Mahindre*/
+	}
 
 	public void chrome() {
 		System.setProperty("webdriver.chrome.driver", prop.getProperty("driver"));
