@@ -17,7 +17,6 @@ public class TestHomepage extends BasePage{
 	CalendarPage calendarPage = null;
 	
 	public TestHomepage() {
-		// TODO Auto-generated constructor stub
 		super();
 	}
 	
