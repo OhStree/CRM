@@ -36,6 +36,16 @@ public class CalendarPage extends BasePage{
 	@FindBy(xpath="//select[@name='slctYear']/option")
 	List<WebElement> selectYear;
 	
+	@FindBy(xpath="//table[@class='crmcalendar']//table//td")
+	List<WebElement> selectDay;
+	
+	@FindBy(xpath="//table[@class='journal']//td[@class='journalrowtime']")
+	List<WebElement> selectMeetinTime;
+	
+	@FindBy(xpath="//i[@class='fa fa-phone']")
+	WebElement selectCall;
+ 	
+	
 	public CalendarPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -46,7 +56,6 @@ public class CalendarPage extends BasePage{
 		mouseHoverActionClass(calender);
 		newEvent.click();
 	}
-	
 	public void ClickOnCaleneder(String day, String month, String year){
 		boolean flag = false;
 		calender.click();
@@ -64,28 +73,71 @@ public class CalendarPage extends BasePage{
 		}
 		if(flag){
 			System.out.println("welcome");
-		}
-		
+		}	
 	}
-
 	public void selectCalenederDate(String day, String month, String year) {
 		calender.click();
+		//select month
 		for(WebElement CRMmonth :selectMonth){
 			if(CRMmonth.getText().equalsIgnoreCase(month)){
 				Select drop = new Select(monthDropdown);
 				drop.selectByVisibleText(month);
+				break;
 			}
 		}
-		
+		//select year
 		for(WebElement CRMyear :selectYear){
-			if(CRMyear.getText().equalsIgnoreCase(month)){
+			if(CRMyear.getText().equalsIgnoreCase(year)){
 				Select drop = new Select(yearDropdown);
 				drop.selectByVisibleText(year);
+				break;
+			}
+		}
+		//select day
+		for(WebElement CRMday :selectDay){
+			if(CRMday.getText().equalsIgnoreCase(day)){
+				CRMday.click();
+				break;
+			}
+		}	
+	}
+	
+	public void takeMeetingCall(String day, String month, String year ,String time){
+		calender.click();
+		
+		for(WebElement CRMmonth :selectMonth){
+			if(CRMmonth.getText().equalsIgnoreCase(month)){
+				Select drop = new Select(monthDropdown);
+				drop.selectByVisibleText(month);
+				break;
+			}
+		}
+		//select year
+		for(WebElement CRMyear :selectYear){
+			if(CRMyear.getText().equalsIgnoreCase(year)){
+				Select drop = new Select(yearDropdown);
+				drop.selectByVisibleText(year);
+				break;
+			}
+		}
+		//select day
+		for(WebElement CRMday :selectDay){
+			if(CRMday.getText().equalsIgnoreCase(day)){
+				CRMday.click();
+				break;
+			}
+		}	
+		
+		
+		for(WebElement  CRMtime: selectMeetinTime ){
+			
+				System.out.println(CRMtime.getText());
+			if(CRMtime.getText().equalsIgnoreCase(time)){
+				System.out.println("clicked");
+				selectCall.click();
 			}
 		}
 		
 	}
 	
-	
-
 }
