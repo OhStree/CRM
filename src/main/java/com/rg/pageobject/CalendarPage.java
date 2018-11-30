@@ -37,6 +37,18 @@ public class CalendarPage extends BasePage{
 	@FindBy(xpath="//select[@name='slctYear']/option")
 	List<WebElement> selectYear;
 	
+	@FindBy(xpath="//table[@class='crmcalendar']//table//td")
+	List<WebElement> selectDay;
+	
+	@FindBy(xpath="//table[@class='journal']//td[@class='journalrowtime']")
+	List<WebElement> selectMeetinTime;
+	
+	@FindBy(xpath="//td[@class='journalrowempty'][@align='right']")
+	List<WebElement> selectCallForParticularTime;
+	
+	
+ 	
+	
 	public CalendarPage() {
 		PageFactory.initElements(driver, this);
 	}
@@ -47,7 +59,6 @@ public class CalendarPage extends BasePage{
 		mouseHoverActionClass(calender);
 		newEvent.click();
 	}
-	
 	public void ClickOnCaleneder(String day, String month, String year){
 		boolean flag = false;
 		calender.click();
@@ -65,44 +76,99 @@ public class CalendarPage extends BasePage{
 		}
 		if(flag){
 			System.out.println("welcome");
-		}
-		
+		}	
 	}
-
 	public void selectCalenederDate(String day, String month, String year) {
 		calender.click();
-//		for(WebElement CRMmonth :selectMonth){
-//			if(CRMmonth.getText().equalsIgnoreCase(month)){
-//				Select drop = new Select(monthDropdown);
-//				drop.selectByVisibleText(month);
-//			}
-//		}
+
+	
+//		Select dropYear = new Select(yearDropdown);
+//		dropYear.selectByValue(year.trim());
 //		
-//		for(WebElement CRMyear :selectYear){
-//			if(CRMyear.getText().equalsIgnoreCase(month)){
-//				Select drop = new Select(yearDropdown);
-//				drop.selectByVisibleText(year);
-//			}
-//		}
+//		waitForElementVisible(monthDropdown, 30);
+//		
+//		Select dropMonth = new Select(monthDropdown);
+//		dropMonth.selectByVisibleText(month.trim());
+//		
+//		waitForElementVisible(monthDropdown, 30);
+//		
+//		String dateXpath = "//td[@class=\"calendarcell\"][contains(text(),'"+day.trim()+"')]";
+//		
+//		driver.findElement(By.xpath(dateXpath)).click();
+//		
+//		waitForElementVisible(monthDropdown, 30);
+
+		//select month
 		
-		Select dropYear = new Select(yearDropdown);
-		dropYear.selectByValue(year.trim());
 		
-		waitForElementVisible(monthDropdown, 30);
+		for(WebElement CRMmonth :selectMonth){
+			if(CRMmonth.getText().equalsIgnoreCase(month)){
+				Select drop = new Select(monthDropdown);
+				drop.selectByVisibleText(month);
+				break;
+			}
+		}
+		//select year
+		for(WebElement CRMyear :selectYear){
+			if(CRMyear.getText().equalsIgnoreCase(year)){
+				Select drop = new Select(yearDropdown);
+				drop.selectByVisibleText(year);
+				break;
+			}
+		}
+		//select day
+		for(WebElement CRMday :selectDay){
+			if(CRMday.getText().equalsIgnoreCase(day)){
+				CRMday.click();
+				break;
+			}
+		}	
+	}
+	
+	public void takeMeetingCall(String day, String month, String year ,String time){
+		calender.click();
 		
-		Select dropMonth = new Select(monthDropdown);
-		dropMonth.selectByVisibleText(month.trim());
+		Select drop = new Select(monthDropdown);
+		drop.selectByVisibleText(month);
+		Select drop2 = new Select(yearDropdown);
+		drop2.selectByVisibleText(year);
+		/*
+		for(WebElement CRMmonth :selectMonth){
+			if(CRMmonth.getText().equalsIgnoreCase(month)){
+				Select drop = new Select(monthDropdown);
+				drop.selectByVisibleText(month);
+				break;
+			}
+		}
+		//select year
+		for(WebElement CRMyear :selectYear){
+			if(CRMyear.getText().equalsIgnoreCase(year)){
+				Select drop = new Select(yearDropdown);
+				drop.selectByVisibleText(year);
+				break;
+			}
+		}*/
+	
+		//select day
+		for(WebElement CRMday :selectDay){
+			if(CRMday.getText().equalsIgnoreCase(day)){
+				CRMday.click();
+				break;
+			}
+		}	
 		
-		waitForElementVisible(monthDropdown, 30);
 		
-		String dateXpath = "//td[@class=\"calendarcell\"][contains(text(),'"+day.trim()+"')]";
-		
-		driver.findElement(By.xpath(dateXpath)).click();
-		
-		waitForElementVisible(monthDropdown, 30);
+		for(int i=0;i<selectMeetinTime.size();i++ ){
+			//selectCallForParticularTime
+				System.out.println(selectMeetinTime.get(i).getText());
+			if(selectMeetinTime.get(i).getText().equalsIgnoreCase(time)){
+				System.out.println("clicked");
+				selectCallForParticularTime.get(i).click();
+				break;
+			}
+		}
+
 		
 	}
 	
-	
-
 }

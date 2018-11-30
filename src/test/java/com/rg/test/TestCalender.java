@@ -11,6 +11,7 @@ import com.rg.pageobject.LoginPage;
 
 public class TestCalender extends BasePage {
 
+	private static final String String = null;
 	LoginPage loginpage = null;
 	CalendarPage calendarPage = null;
 	HomePage homePage = null;
@@ -50,6 +51,15 @@ public class TestCalender extends BasePage {
 		String month = "May";
 		String year = "2000";
 		calendarPage.selectCalenederDate(day,month,year);
+	}
+	
+	@Test
+	public void setEvent(){
+		String day = "11";
+		String month = "May";
+		String year = "2011";
+		String time = "07:00 AM";
+		calendarPage. takeMeetingCall( day,  month,  year , time);
 	}
 	
 	

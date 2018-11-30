@@ -17,7 +17,11 @@ public class BasePage {
 
 	public static WebDriver driver;
 	public static Properties prop = null;
-	public static String propPath = "C:\\Users\\lenovo\\git\\CRM30\\CRM\\src\\main\\java\\com\\rg\\property\\propertie.properties";
+	
+	
+
+	public static String propPath = System.getProperty("user.dir")+"\\src\\main\\java\\com\\rg\\property\\propertie.properties";
+
 	private JavascriptExecutor executor =null;
 	private Actions action=null;
 
