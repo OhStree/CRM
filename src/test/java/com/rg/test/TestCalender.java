@@ -30,7 +30,7 @@ public class TestCalender extends BasePage {
 		calendarPage = new CalendarPage();
 	}
 
-	/*@Test
+	@Test
 	public void clickOnCalanderTabANDClickNewEvent() {
 		
 		calendarPage.mouseOverToCalende();
@@ -51,7 +51,7 @@ public class TestCalender extends BasePage {
 		String month = "May";
 		String year = "2000";
 		calendarPage.selectCalenederDate(day,month,year);
-	}*/
+	}
 	
 	@Test
 	public void setEvent(){

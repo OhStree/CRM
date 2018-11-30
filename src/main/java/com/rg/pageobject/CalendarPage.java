@@ -42,8 +42,10 @@ public class CalendarPage extends BasePage{
 	@FindBy(xpath="//table[@class='journal']//td[@class='journalrowtime']")
 	List<WebElement> selectMeetinTime;
 	
-	@FindBy(xpath="//i[@class='fa fa-phone']")
-	WebElement selectCall;
+	@FindBy(xpath="//td[@class='journalrowempty'][@align='right']")
+	List<WebElement> selectCallForParticularTime;
+	
+	
  	
 	
 	public CalendarPage() {
@@ -78,6 +80,8 @@ public class CalendarPage extends BasePage{
 	public void selectCalenederDate(String day, String month, String year) {
 		calender.click();
 		//select month
+		
+		
 		for(WebElement CRMmonth :selectMonth){
 			if(CRMmonth.getText().equalsIgnoreCase(month)){
 				Select drop = new Select(monthDropdown);
@@ -105,6 +109,11 @@ public class CalendarPage extends BasePage{
 	public void takeMeetingCall(String day, String month, String year ,String time){
 		calender.click();
 		
+		Select drop = new Select(monthDropdown);
+		drop.selectByVisibleText(month);
+		Select drop2 = new Select(yearDropdown);
+		drop2.selectByVisibleText(year);
+		/*
 		for(WebElement CRMmonth :selectMonth){
 			if(CRMmonth.getText().equalsIgnoreCase(month)){
 				Select drop = new Select(monthDropdown);
@@ -119,7 +128,8 @@ public class CalendarPage extends BasePage{
 				drop.selectByVisibleText(year);
 				break;
 			}
-		}
+		}*/
+	
 		//select day
 		for(WebElement CRMday :selectDay){
 			if(CRMday.getText().equalsIgnoreCase(day)){
@@ -129,12 +139,13 @@ public class CalendarPage extends BasePage{
 		}	
 		
 		
-		for(WebElement  CRMtime: selectMeetinTime ){
-			
-				System.out.println(CRMtime.getText());
-			if(CRMtime.getText().equalsIgnoreCase(time)){
+		for(int i=0;i<selectMeetinTime.size();i++ ){
+			//selectCallForParticularTime
+				System.out.println(selectMeetinTime.get(i).getText());
+			if(selectMeetinTime.get(i).getText().equalsIgnoreCase(time)){
 				System.out.println("clicked");
-				selectCall.click();
+				selectCallForParticularTime.get(i).click();
+				break;
 			}
 		}
 		
