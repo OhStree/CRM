@@ -29,20 +29,20 @@ public class TestCalender extends BasePage {
 		calendarPage = new CalendarPage();
 	}
 
-	@Test
-	public void clickOnCalanderTabANDClickNewEvent() {
-		
-		calendarPage.mouseOverToCalende();
-	}
-
-	@Test
-	public void calenderDisplayedOrNot(){
-		String day = "10";
-		String month = "May";
-		String year = "2018";
-		calendarPage.ClickOnCaleneder(day,month,year);
-		
-	}
+//	@Test
+//	public void clickOnCalanderTabANDClickNewEvent() {
+//		
+//		calendarPage.mouseOverToCalende();
+//	}
+//
+//	@Test
+//	public void calenderDisplayedOrNot(){
+//		String day = "10";
+//		String month = "May";
+//		String year = "2018";
+//		calendarPage.ClickOnCaleneder(day,month,year);
+//		
+//	}
 	
 	@Test
 	public void setDate(){

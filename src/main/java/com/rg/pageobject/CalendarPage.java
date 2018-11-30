@@ -2,6 +2,7 @@ package com.rg.pageobject;
 
 import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -70,19 +71,35 @@ public class CalendarPage extends BasePage{
 
 	public void selectCalenederDate(String day, String month, String year) {
 		calender.click();
-		for(WebElement CRMmonth :selectMonth){
-			if(CRMmonth.getText().equalsIgnoreCase(month)){
-				Select drop = new Select(monthDropdown);
-				drop.selectByVisibleText(month);
-			}
-		}
+//		for(WebElement CRMmonth :selectMonth){
+//			if(CRMmonth.getText().equalsIgnoreCase(month)){
+//				Select drop = new Select(monthDropdown);
+//				drop.selectByVisibleText(month);
+//			}
+//		}
+//		
+//		for(WebElement CRMyear :selectYear){
+//			if(CRMyear.getText().equalsIgnoreCase(month)){
+//				Select drop = new Select(yearDropdown);
+//				drop.selectByVisibleText(year);
+//			}
+//		}
 		
-		for(WebElement CRMyear :selectYear){
-			if(CRMyear.getText().equalsIgnoreCase(month)){
-				Select drop = new Select(yearDropdown);
-				drop.selectByVisibleText(year);
-			}
-		}
+		Select dropYear = new Select(yearDropdown);
+		dropYear.selectByValue(year.trim());
+		
+		waitForElementVisible(monthDropdown, 30);
+		
+		Select dropMonth = new Select(monthDropdown);
+		dropMonth.selectByVisibleText(month.trim());
+		
+		waitForElementVisible(monthDropdown, 30);
+		
+		String dateXpath = "//td[@class=\"calendarcell\"][contains(text(),'"+day.trim()+"')]";
+		
+		driver.findElement(By.xpath(dateXpath)).click();
+		
+		waitForElementVisible(monthDropdown, 30);
 		
 	}
 	
